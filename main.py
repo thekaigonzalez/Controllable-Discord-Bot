@@ -9,7 +9,7 @@ from termcolor import cprint
 
 client = commands.Bot(command_prefix="/", intents=discord.Intents.all())
 
-curr_channel = 969266297504428092
+curr_channel = 969335944643760260
 
 @tasks.loop(seconds=2)
 async def thr():
@@ -35,4 +35,6 @@ async def on_message(msg: discord.Message):
         cprint("[" + msg.author.display_name.lower() + " (" + str(datetime.now().month) + "/" + str(datetime.now().day) + "/" +
          str(datetime.now().year) + ")]: " + msg.content, 'green')
 
-client.run("YOUR_TOKEN")
+f = open("token.txt")
+client.run(f.read())
+f.close()
