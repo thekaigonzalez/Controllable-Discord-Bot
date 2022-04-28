@@ -7,9 +7,9 @@ from aioconsole.stream import ainput
 
 from termcolor import cprint
 
-client = commands.Bot(command_prefix="/")
+client = commands.Bot(command_prefix="/", intents=discord.Intents.all())
 
-curr_channel = 969083846110879747
+curr_channel = 969266297504428092
 
 @tasks.loop(seconds=2)
 async def thr():
